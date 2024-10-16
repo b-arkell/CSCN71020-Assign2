@@ -19,7 +19,7 @@ namespace BCSRecUnitTests
 		
 		TEST_METHOD(PerimeterCalculationTest)
 		{
-			// testing the get perimeter function using length = 2 and width = 4
+			// testing the getPerimeter function using length = 2 and width = 4
 			int length = 2;
 			int width = 4;
 			int result = 0;
@@ -35,7 +35,7 @@ namespace BCSRecUnitTests
 
 		TEST_METHOD(AreaCalculationTest)
 		{
-			// testing getarea function with A = L X W
+			// testing getarea function with length = 5 and width = 4
 			int length = 5;
 			int width = 4;
 			int result = 0;
@@ -51,7 +51,7 @@ namespace BCSRecUnitTests
 
 		TEST_METHOD(NegativeNumberTest)
 		{
-			// testing negative numbers 
+			// testing for negative number acception with -42 
 			int input = -42;
 			int length = 1;
 			
@@ -74,7 +74,6 @@ namespace BCSRecUnitTests
 		TEST_METHOD(LengthLowerRange)
 		{
 			// testing lower limit with 0 & 1 for inclusive value
-			// test lower limit with 0
 			int input = 0;
 			int length = 1;
 			int input2 = 1;
@@ -93,7 +92,7 @@ namespace BCSRecUnitTests
 
 		TEST_METHOD(NegativeNumberTest)
 		{
-			// testing negative numbers 
+			// testing for negative number acception with -24
 			int input = -24;
 			int length = 1;
 
@@ -116,7 +115,6 @@ namespace BCSRecUnitTests
 		TEST_METHOD(WidthLowerRange)
 		{
 			// testing lower limit with 0 & 1 for inclusive value
-			// test lower limit with 0
 			int input = 0;
 			int width = 1;
 			int input2 = 1;
