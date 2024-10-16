@@ -45,7 +45,7 @@ namespace BCSRecUnitTests
 		}
 	};
 
-	TEST_CLASS(setLengthFunction)
+	TEST_CLASS(setLengthFunctionality)
 	{
 	public:
 
@@ -59,7 +59,7 @@ namespace BCSRecUnitTests
 			Assert::AreEqual(1, length);
 		}
 
-		TEST_METHOD(UpperRangeFunctionality)
+		TEST_METHOD(LengthUpperRange)
 		{
 			// testing upper limit with 100 & 99 for inclusive value 
 			int input = 99;
@@ -71,7 +71,7 @@ namespace BCSRecUnitTests
 			Assert::AreEqual(99, length);
 			Assert::AreEqual(1, length2);
 		}
-		TEST_METHOD(LowerRangeFunctionality)
+		TEST_METHOD(LengthLowerRange)
 		{
 			// testing lower limit with 0 & 1 for inclusive value
 			// test lower limit with 0
@@ -84,6 +84,48 @@ namespace BCSRecUnitTests
 			setLength(input2, &length2);
 			Assert::AreEqual(1, length);
 			Assert::AreEqual(1, length2);
+		}
+	};
+
+	TEST_CLASS(setWidthFunctionality)
+	{
+	public:
+
+		TEST_METHOD(NegativeNumberTest)
+		{
+			// testing negative numbers 
+			int input = -24;
+			int length = 1;
+
+			setLength(input, &length);
+			Assert::AreEqual(1, length);
+		}
+
+		TEST_METHOD(WidthUpperRange)
+		{
+			// testing upper limit with 100 & 99 for inclusive value 
+			int input = 99;
+			int input2 = 100;
+			int length = 1;
+			int length2 = 1;
+			setWidth(input, &length);
+			setWidth(input2, &length2);
+			Assert::AreEqual(99, length);
+			Assert::AreEqual(1, length2);
+		}
+		TEST_METHOD(WidthLowerRange)
+		{
+			// testing lower limit with 0 & 1 for inclusive value
+			// test lower limit with 0
+			int input = 0;
+			int width = 1;
+			int input2 = 1;
+			int width2 = 50;
+
+			setWidth(input, &width);
+			setWidth(input2, &width2);
+			Assert::AreEqual(1, width);
+			Assert::AreEqual(1, width2);
 		}
 	};
 }
